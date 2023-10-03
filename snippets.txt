@@ -1,0 +1,530 @@
+
+   "Картинка": {
+		"prefix": "img",
+		"body": [
+		   "<img src=\"@img$1\" alt=\"$2\" lazy=\"loading\">$0"
+		],
+		"description": "Картинка"
+	},
+	"saasf": {
+		"prefix": "nav",
+		"body": [
+		   "nav.menu>ul.menu__list>li.menu__item*$1>a.menu__link[href=\"#!\"]$0"
+		],
+		"description": ""
+	},
+	"ssf": {
+		"prefix": "ll",
+		"body": [
+		   "lazy=\"loading\"$0"
+		],
+		"description": ""
+	},
+	"burger": {
+		"prefix": "burger",
+		"body": [
+		   "<button class=\"menu-icon\" aria-label=\"Иконка меню\" type=\"button\">",
+		   "   <span></span>",
+		   "   <span></span>",
+		   "   <span></span>",
+		   "</button>$0"
+		],
+		"description": ""
+	 },
+    "asasqsq": {
+      "prefix": "al",
+      "body": [
+        "<a class=\"logo\" href=\"/../\"><img src=\"@img/icons/logo.svg\" alt=\"Логотип\" lazy=\"loading\"></a>$0"
+      ],
+      "description": ""
+   },
+   "sdsdsdsdsd": {
+      "prefix": "sec",
+      "body": [
+        "<section class=\"page__$1 $2\">",
+        "   <div class=\"$3__container\">",
+        "      $0",
+        "   </div>",
+        "</section>"
+      ],
+      "description": ""
+   },
+
+
+
+
+
+   "afdfgdgdg": {
+      "prefix": "av",
+      "body": [
+         "@include adaptiveValue($1,$2,$3);$0"
+      ],
+      "description": ""
+   },
+   "a": {
+      "prefix": "lh",
+      "body": [
+         "line-height: calc($1/$2);$0"
+      ],
+      "description": ""
+   },
+   "as": {
+      "prefix": "t",
+      "body": [
+         "top: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "asa": {
+      "prefix": "r",
+      "body": [
+         "right: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "aasa": {
+      "prefix": "b",
+      "body": [
+         "bottom: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "aabsa": {
+      "prefix": "l",
+      "body": [
+         "left: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "aass": {
+      "prefix": "bgr",
+      "body": [
+         "background: url(\"@img$1\") 0 0 / cover no-repeat;$0"
+      ],
+      "description": ""
+   },
+   "wwwwww": {
+      "prefix": "trs",
+      "body": [
+         "transition: all$1 .3s;$0"
+      ],
+      "description": ""
+   },
+   "wwwww": {
+      "prefix": "tr",
+      "body": [
+         "toRem($1)$0"
+      ],
+      "description": ""
+   },
+   "rgggrrgr": {
+      "prefix": "trs",
+      "body": [
+         "translate: $1 $2;$0"
+      ],
+      "description": ""
+   },
+   "rgggrrgar": {
+      "prefix": "ro",
+      "body": [
+         "rotate: $1deg;$0"
+      ],
+      "description": ""
+   },
+   "rggrr": {
+      "prefix": "br5",
+      "body": [
+         "border-radius: 50%;$0"
+      ],
+      "description": ""
+   },
+   "rggrras": {
+      "prefix": "op",
+      "body": [
+         "filter: opacity($1);$0"
+      ],
+      "description": ""
+   },
+   "rggs": {
+      "prefix": "mbe",
+      "body": [
+         "margin-bottom: $1/$2 * 1em;$0"
+      ],
+      "description": ""
+   },
+   "swdwdwww": {
+      "prefix": "wpr",
+      "body": [
+         "width: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "frgt": {
+      "prefix": "hpr",
+      "body": [
+         "height: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "frgst": {
+      "prefix": "h",
+      "body": [
+         "height: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "frgasst": {
+      "prefix": "w",
+      "body": [
+         "width: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "swdwdswww": {
+      "prefix": "tpr",
+      "body": [
+         "top: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "frgtd": {
+      "prefix": "bpr",
+      "body": [
+         "bottom: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "swdwdsswww": {
+      "prefix": "rpr",
+      "body": [
+         "right: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "frgtds": {
+      "prefix": "lpr",
+      "body": [
+         "left: calc($1/$2)*100%;$0"
+      ],
+      "description": ""
+   },
+   "sadsdwwdwdaads": {
+      "prefix": "anh",
+      "body": [
+         "@media (any-hover: hover) {",
+         "   transition: all 0.3s;",
+         "   &:hover{",
+         "      $0",
+         "   }",
+         "}"
+      ],
+      "description": ""
+   },
+   "assswdd": {
+      "prefix": "nls",
+      "body": [
+         "&:not(:last-child){",
+         "  $0",
+         "}",
+      ],
+      "description": ""
+   },
+   "asdasdasdw": {
+      "prefix": "after",
+      "body": [
+         "&::after{",
+         "   content: \"\";",
+         "   $0",
+         "}"
+      ],
+      "description": ""
+   },
+   "asdasdasdaw": {
+      "prefix": "before",
+      "body": [
+         "&::before{",
+         "   content: \"\";",
+         "   $0",
+         "}"
+      ],
+      "description": ""
+   },
+   "asaa": {
+      "prefix": "avm",
+      "body": [
+         "@include adaptiveValueMod($1,$2,$3,$4,$5);$0"
+      ],
+      "description": ""
+   },
+   "b": {
+      "prefix": "fz",
+      "body": [
+         "font-size: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "c": {
+      "prefix": "ffz",
+      "body": [
+         "@include adaptiveValue(font-size,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "d": {
+      "prefix": "ppt",
+      "body": [
+         "@include adaptiveValue(padding-top,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "e": {
+      "prefix": "ppl",
+      "body": [
+         "@include adaptiveValue(padding-left,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "f": {
+      "prefix": "ppb",
+      "body": [
+         "@include adaptiveValue(padding-bottom,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "g": {
+      "prefix": "ppr",
+      "body": [
+         "@include adaptiveValue(padding-right,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "wed": {
+      "prefix": "mmt",
+      "body": [
+         "@include adaptiveValue(margin-top,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "ewd": {
+      "prefix": "mml",
+      "body": [
+         "@include adaptiveValue(margin-left,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "ffre": {
+      "prefix": "mmb",
+      "body": [
+         "@include adaptiveValue(margin-bottom,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "gfre": {
+      "prefix": "mmr",
+      "body": [
+         "@include adaptiveValue(margin-right,$1,$2);$0"
+      ],
+      "description": ""
+   },
+   "h": {
+      "prefix": "pt",
+      "body": [
+         "padding-top: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "fd": {
+      "prefix": "pr",
+      "body": [
+         "padding-right: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "df": {
+      "prefix": "pb",
+      "body": [
+         "padding-bottom: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "fg": {
+      "prefix": "pl",
+      "body": [
+         "padding-left: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "th": {
+      "prefix": "mt",
+      "body": [
+         "margin-top: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "thlk": {
+      "prefix": "mr",
+      "body": [
+         "margin-right: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "we": {
+      "prefix": "mb",
+      "body": [
+         "margin-bottom: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "dfd": {
+      "prefix": "ml",
+      "body": [
+         "margin-left: toRem($1);$0"
+      ],
+      "description": ""
+   },
+   "wdwdq": {
+      "prefix": "mnd1",
+      "body": [
+         "@media (min-width:  \\$pc) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "sdwee": {
+      "prefix": "mnd2",
+      "body": [
+         "@media (min-width:  \\$tablet) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "rgrwe": {
+      "prefix": "mnd3",
+      "body": [
+         "@media (min-width:  \\$mobile) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "wfddswdw": {
+      "prefix": "mnd4",
+      "body": [
+         "@media (min-width:  \\$mobileSmall) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "dsds": {
+      "prefix": "md1",
+      "body": [
+         "@media (max-width:  \\$pc) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "sde": {
+      "prefix": "md2",
+      "body": [
+         "@media (max-width:  \\$tablet) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "rgr": {
+      "prefix": "md3",
+      "body": [
+         "@media (max-width:  \\$mobile) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "wfdwdw": {
+      "prefix": "md4",
+      "body": [
+         "@media (max-width:  \\$mobileSmall) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "afafs": {
+      "prefix": "al",
+      "body": [
+         "<a class=\"logo\" href=\"/../\" ><img src=\"logo.svg\" alt=\"Логотип сайта\"></a>$0"
+      ],
+      "description": ""
+   },
+   "efefe": {
+      "prefix": "/*",
+      "body": [
+         "//=============================================================================================================================================",
+         "$0"
+      ],
+      "description": ""
+   },
+   "wdwdqs": {
+      "prefix": "md",
+      "body": [
+         "@media (max-width:   toEm($1)) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "wdwdsaqs": {
+      "prefix": "mnd",
+      "body": [
+         "@media (min-width:  toEm($1)) {",
+         "   $0",
+         "};",
+      ],
+      "description": ""
+   },
+   "asssas": {
+      "prefix": "hov",
+      "body": [
+         "@media (any-hover: hover) {",
+         "   transition: color 0.3s;",
+         "   position: relative;",
+         "   &::before {",
+         "      content: \"\";",
+         "      display: block;",
+         "      width: 100%;",
+         "      height: toRem(1);",
+         "      background-color: #fff;",
+         "      transform-origin: right;",
+         "      position: absolute;",
+         "",
+         "      bottom: toRem(0);",
+         "",
+         "      left: 50%;",
+         "      transform: translateX(-50%) scaleX(0);",
+         "      transition: transform 0.3s;",
+         "   }",
+         "   &:hover::before {",
+         "      transform: translateX(-50%) scaleX(1);",
+         "      transform-origin: left;",
+         "   }",
+         "}"
+      ],
+      "description": ""
+   },
+   "sassda": {
+      "prefix": "foc",
+      "body": [
+         "&:focus {",
+         "   outline: none;",
+         "}",
+         "&:focus-visible {",
+         "   box-shadow: 0 0 toRem(10) #fff;",
+         "}"
+      ],
+      "description": ""
+   }

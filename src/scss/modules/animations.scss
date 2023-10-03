@@ -1,0 +1,118 @@
+._anim-no-hide {
+}
+._anim-top-down {
+	filter: opacity(0);
+	translate: 0 -150%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-down-top {
+	filter: opacity(0);
+	translate: 0 150%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-left-to-right {
+	filter: opacity(0);
+	translate: -120% 0%;
+	transition:
+		translate 1.6s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-right-to-left {
+	filter: opacity(0);
+	translate: 120% 0%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-scale {
+	filter: opacity(0);
+	scale: 0;
+	transition:
+		scale 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		scale: 1;
+	}
+}
+._anim-right-top-to-place {
+	filter: opacity(0);
+	translate: 120% -120%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-right-bottom-to-place {
+	filter: opacity(0);
+	translate: 120% 120%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-left-top-to-place {
+	filter: opacity(0);
+	translate: -120% -120%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}
+._anim-left-bottom-to-place {
+	filter: opacity(0);
+	translate: -120% 120%;
+	transition:
+		translate 1.2s,
+		filter 1.2s;
+
+	&._active,
+	._active & {
+		filter: opacity(1);
+		translate: 0 0;
+	}
+}

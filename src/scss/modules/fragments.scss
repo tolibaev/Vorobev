@@ -1,0 +1,53 @@
+.title {
+	@include adaptiveValue(font-size, 48, 20, $maxWidthContainer, $mobile);
+	font-weight: 700;
+	line-height: 110%;
+	font-family: $p, serif;
+}
+.ph {
+	font-family: $p, serif;
+}
+.btn {
+	display: inline-block;
+	border-radius: toRem(10);
+	@include adaptiveValue(padding-top, 44, 20, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-bottom, 44, 20, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-left, 58, 16, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-right, 58, 16, $maxWidthContainer, $mobile);
+	@include adaptiveValue(font-size, 16, 10, $maxWidthContainer, $mobile);
+	background-color: $blue;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: toRem(1.6);
+	color: $white;
+	@media (max-width: toEm($mobileSmall)) {
+		width: 100%;
+		text-align: center;
+	}
+	@media (any-hover: hover) {
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $gold;
+		}
+	}
+	&--white {
+		color: oklch(64.01% 0 0);
+		font-weight: 300;
+		@include adaptiveValue(font-size, 18, 12, $maxWidthContainer, $mobile);
+		background-color: $white;
+		color: oklch(64.01% 0 0);
+		@media (any-hover: hover) {
+			transition:
+				background-color 0.3s,
+				color 0.3s;
+			&:hover {
+				background-color: $blue !important;
+				color: $white !important;
+			}
+		}
+	}
+}
+._stroke {
+	-webkit-text-stroke: toRem(1) #22adaa;
+	-webkit-text-fill-color: transparent;
+}

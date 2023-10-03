@@ -1,0 +1,117 @@
+.why {
+	// .why__container
+	&__container {
+		position: relative;
+	}
+	// .why__decor
+	&__decor {
+		@media (min-width: toEm($tablet)) {
+			display: block;
+			position: absolute;
+			top: toRem(-100);
+			left: toRem(500);
+			width: toRem(1022);
+			height: toRem(630);
+			// @include adaptiveValue(width, 1022, 400, $maxWidthContainer, $mobile);
+			@include adaptiveValue(height, 630, 400, $maxWidthContainer, $mobile);
+		}
+		display: none;
+	}
+	// .why__title
+	&__title {
+		margin-bottom: toRem(22);
+		@media (min-width: toEm($tablet)) {
+			max-width: toRem(710);
+		}
+	}
+	// .why__content
+	&__content {
+		@media (min-width: toEm($tablet)) {
+			max-width: toRem(600);
+		}
+		p:first-child {
+			@include adaptiveValue(font-size, 22, 14, $maxWidthContainer, $mobile);
+		}
+		p {
+			color: $black;
+			@include adaptiveValue(font-size, 16, 12, $maxWidthContainer, $mobile);
+		}
+		strong {
+			display: block;
+		}
+		span {
+			font-weight: 700;
+		}
+		@include adaptiveValue(margin-bottom, 46, 20, $maxWidthContainer, $mobile);
+	}
+	&__text {
+		& > *:not(:last-child) {
+			margin-bottom: toRem(22);
+		}
+		p:nth-child(1) {
+			transition-delay: 0.2s;
+		}
+		p:nth-child(2) {
+			transition-delay: 0.4s;
+		}
+		p:nth-child(3) {
+			transition-delay: 0.6s;
+		}
+	}
+	// .why__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(toRem(320), 1fr));
+		@include adaptiveValue(gap, 26, 10, $maxWidthLayout, $tablet);
+		@include adaptiveValue(margin-bottom, 47, 20, $maxWidthContainer, $mobile);
+	}
+	// .why__column
+	&__column {
+		@include adaptiveValue(padding-top, 27, 10, $maxWidthLayout, $tablet);
+		@include adaptiveValue(padding-left, 32, 16, $maxWidthLayout, $tablet);
+		@include adaptiveValue(padding-right, 32, 16, $maxWidthLayout, $tablet);
+		@include adaptiveValue(padding-bottom, 26, 26, $maxWidthLayout, $tablet);
+		background-color: oklch(97.85% 0.005 258.32);
+	}
+	// .why__link
+	&__link {
+	}
+}
+.item-why {
+	height: 100%;
+	// .item-why__top
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: toRem(15);
+		margin-bottom: toRem(18);
+	}
+	// .item-why__num
+	&__num {
+		font-style: italic;
+		color: $gold;
+		text-transform: uppercase;
+		line-height: 130%;
+		white-space: nowrap;
+		font-weight: 400;
+	}
+	// .item-why__descr
+	&__descr {
+	}
+	// .item-why__text
+	&__text {
+	}
+}
+.why-links-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue(gap, 24, 12, $maxWidthContainer, $mobile);
+	@media (max-width: toEm($mobile)) {
+		flex-direction: column;
+		& > a {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,38 @@
+@function toRem($px) {
+	$result: calc($px / 16) * 1rem;
+	@return $result;
+}
+@function toEm($px) {
+	$result: calc($px / 16) * 1em;
+	@return $result;
+}
+
+$pc: $maxWidthContainer + 30;
+$tablet: 991.98;
+$mobile: 767.98;
+$mobileSmall: 479.98;
+
+@mixin adaptiveValue($property, $startSize, $finishSize, $startWidth, $finishWidth) {
+	$rangeSize: $startSize - $finishSize;
+	$rangeWidth: $startWidth - $finishWidth;
+	#{$property}: clamp(
+		#{$finishSize}px,
+		calc(#{$finishSize}px + #{$rangeSize} * ((100vw - #{$finishWidth}px) / #{$rangeWidth})),
+		#{$startSize}px
+	);
+}
+
+// @mixin adaptiveValueMod($property, $startSize, $finishSize, $startWidth, $finishWidth) {
+//    $rangeSize: $startSize - $finishSize;
+//    $rangeWidth: $startWidth - $finishWidth;
+
+//    #{$property}: toRem($startSize);
+
+//    @media (max-width:  toEm($startWidth)) {
+//       #{$property}: calc(#{$finishSize}px + #{$rangeSize} * ((100vw - #{$finishWidth}px) / (#{$rangeWidth})));
+//    }
+
+//    @media (max-width:  toEm($finishWidth)) {
+//       #{$property}: toRem($finishSize);
+//    }
+// }

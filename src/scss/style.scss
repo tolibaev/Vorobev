@@ -1,0 +1,128 @@
+@charset 'UTF-8';
+@import "./modules/reset";
+@import "./modules/fonts";
+
+//$display=swap
+// @import "./modules/iconsfont";
+@import url("https://fonts.googleapis.com/css?family=Philosopher:regular,italic,700$display=swap");
+
+//=============================================================================================================================================
+
+$maxWidthContainer: 1160;
+$containerPadding: 12;
+$maxWidthLayout: 1920;
+$fontFamily: "TTNorms";
+$color: oklch(25.21% 0.006 271.18);
+
+$p: "Philosopher";
+
+@import "./modules/mixins";
+
+@import "./modules/vars";
+
+//=============================================================================================================================================
+
+body {
+	font-family: $fontFamily, Arial, Helvetica, sans-serif;
+	color: $color;
+	line-height: 150%;
+	line-height: calc(34 / 20);
+}
+
+@import "./modules/animations";
+
+@import "./modules/containers";
+
+@import "./modules/base";
+@import "./modules/fragments";
+// @import "./modules/popup";
+// @import "./modules/dropdown";
+//=============================================================================================================================================
+@import "./blocks/header";
+
+.page {
+	// .page__hero
+	&__hero {
+		min-height: 100dvh;
+	}
+	// .page__seo
+	&__seo {
+		@include adaptiveValue(padding-top, 166, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__map
+	&__map {
+		@include adaptiveValue(padding-top, 90, 12, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 105, 12, $maxWidthContainer, $mobile);
+		@media (min-width: toEm(1600)) {
+			padding-left: toRem(114);
+		}
+	}
+	// .page__result
+	&__result {
+		@include adaptiveValue(padding-top, 110, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 120, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__eco
+	&__eco {
+		background-color: oklch(97.85% 0.005 258.32);
+		@include adaptiveValue(padding-top, 110, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 120, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__top
+	&__top {
+		background: linear-gradient(
+			102deg,
+			#2d334a 6.04%,
+			#38405c 23.09%,
+			#2d334a 38.75%,
+			#38405c 50.27%,
+			#2d334a 62.7%,
+			#2d334a 65.93%,
+			#38405c 80.67%,
+			#2d334a 94.49%
+		);
+		@include adaptiveValue(padding-top, 116, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 116, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__object
+	&__object {
+		@include adaptiveValue(padding-bottom, 110, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__why
+	&__why {
+		@include adaptiveValue(padding-bottom, 120, 20, $maxWidthContainer, $mobile);
+	}
+	// .page__help
+	&__help {
+		padding-bottom: toRem(70);
+		@include adaptiveValue(padding-top, 120, 30, $maxWidthContainer, $mobile);
+		background: linear-gradient(
+			102deg,
+			#2d334a 6.04%,
+			#38405c 23.09%,
+			#2d334a 38.75%,
+			#38405c 50.27%,
+			#2d334a 62.7%,
+			#2d334a 65.93%,
+			#38405c 80.67%,
+			#2d334a 94.49%
+		);
+	}
+	// .page__tobuy
+	&__tobuy {
+		@include adaptiveValue(padding-top, 126, 20, $maxWidthContainer, $mobile);
+		padding-bottom: toRem(30);
+	}
+}
+@import "./blocks/hero";
+@import "./blocks/seo";
+@import "./blocks/map";
+@import "./blocks/result";
+@import "./blocks/eco";
+@import "./blocks/top";
+@import "./blocks/object";
+@import "./blocks/why";
+@import "./blocks/help";
+@import "./blocks/tobuy";
+
+@import "./blocks/footer";

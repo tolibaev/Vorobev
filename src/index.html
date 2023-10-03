@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/blocks/head.html', {
+"title": "Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/blocks/header.html', {})
+		<main class="page">
+			@@include('html/blocks/hero.html', {})
+			@@include('html/blocks/seo.html', {})
+			@@include('html/blocks/map.html', {})
+			@@include('html/blocks/result.html', {})
+			@@include('html/blocks/eco.html', {})
+			@@include('html/blocks/top.html', {})
+			@@include('html/blocks/object.html', {})
+			@@include('html/blocks/why.html', {})
+			@@include('html/blocks/help.html', {})
+			@@include('html/blocks/tobuy.html', {})
+		</main>
+		@@include('html/blocks/footer.html', {})
+		<!-- @@include('html/modules/popups.html', {}) -->
+	</div>
+	<script src="js/app.bundle.js"></script>
+</body>
+
+</html>

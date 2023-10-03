@@ -1,0 +1,91 @@
+.help {
+	// .help__container
+	&__container {
+	}
+	// .help__title
+	&__title {
+		text-align: center;
+		color: $white;
+		@include adaptiveValue(margin-bottom, 47, 20, $maxWidthContainer, $mobile);
+	}
+	// .help__columns
+	&__columns {
+		@media (min-width: toEm($mobile)) {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(toRem(320), 1fr));
+			@include adaptiveValue(row-gap, 52, 20, $maxWidthContainer, $mobile);
+			@include adaptiveValue(column-gap, 42, 20, $maxWidthContainer, $mobile);
+		}
+		@media (max-width: toEm($mobile)) {
+			& > *:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+	}
+	// .help__column
+	&__column {
+		position: relative;
+		border-radius: toRem(20);
+		background: $white;
+		box-shadow: 0px toRem(4) toRem(100) 0px rgba(26, 29, 33, 0.07);
+	}
+	// .help__body
+	&__body {
+		height: 100%;
+		@include adaptiveValue(padding-top, 40, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-left, 38, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-right, 38, 20, $maxWidthContainer, $mobile);
+		padding-bottom: toRem(20);
+		display: flex;
+		flex-direction: column;
+	}
+	// .help__subtitle
+	&__subtitle {
+		@include adaptiveValue(font-size, 36, 18, $maxWidthContainer, $mobile);
+		line-height: 140%;
+		@include adaptiveValue(margin-bottom, 25, 6, $maxWidthContainer, $mobile);
+	}
+	// .help__text
+	&__text {
+		& > *:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@include adaptiveValue(margin-bottom, 30, 20, $maxWidthContainer, $mobile);
+		flex-grow: 1;
+	}
+	// .help__btns
+	&__btns {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue(gap, 20, 8, $maxWidthContainer, $mobile);
+	}
+	&__link {
+		border-radius: toRem(10);
+		background-color: oklch(91.69% 0.032 89.15);
+		@include adaptiveValue(padding-top, 16, 10, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 22, 12, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-left, 22, 7, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-right, 22, 7, $maxWidthContainer, $mobile);
+		@include adaptiveValue(font-size, 22, 14, $maxWidthContainer, $mobile);
+		font-weight: 700;
+		strong {
+			display: block;
+		}
+		@media (any-hover: hover) {
+			transition:
+				background-color 0.3s,
+				color 0.3s;
+			&:hover {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+	}
+	&__btn {
+		@include adaptiveValue(padding-top, 36, 10, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-bottom, 36, 12, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-left, 22, 7, $maxWidthContainer, $mobile);
+		@include adaptiveValue(padding-right, 22, 7, $maxWidthContainer, $mobile);
+	}
+}

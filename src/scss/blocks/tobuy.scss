@@ -1,0 +1,169 @@
+.tobuy {
+	position: relative;
+	min-height: 100dvh;
+	&__bgr {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	// .tobuy__container
+	&__container {
+		position: relative;
+		z-index: 5;
+		@media (min-width: toEm($tablet)) {
+			display: flex;
+			align-items: flex-start;
+			gap: toRem(20);
+			justify-content: space-between;
+		}
+	}
+	// .tobuy__content
+	&__content {
+		@media (min-width: toEm($tablet)) {
+			flex-basis: toRem(630);
+			margin: 0;
+		}
+		@include adaptiveValue(margin-bottom, 50, 20, $tablet, 320);
+	}
+	// .tobuy__title
+	&__title {
+		line-height: 110%;
+		margin-bottom: toRem(13);
+		@media (min-width: toEm($tablet)) {
+			max-width: toRem(555);
+		}
+	}
+	// .tobuy__text
+	&__text {
+		@include adaptiveValue(margin-bottom, 38, 20, $maxWidthContainer, $mobile);
+		@include adaptiveValue(font-size, 22, 14, $maxWidthContainer, $mobile);
+	}
+	// .tobuy__benefits
+	&__benefits {
+		@media (min-width: toEm($mobile)) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: toRem(30);
+		}
+		@media (min-width: toEm($tablet)) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: end;
+			margin: 0;
+		}
+		display: block;
+	}
+	// .tobuy__item
+	&__item {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue(gap, 30, 20, $maxWidthContainer, $mobile);
+		@media (min-width: toEm($tablet)) {
+			&:last-child {
+				grid-column: 2/-1;
+			}
+		}
+		@media (max-width: toEm($tablet)) {
+			flex-basis: 30%;
+		}
+	}
+	// .tobuy__num
+	&__num {
+		color: $gold;
+		@extend .ph;
+		font-size: toRem(48);
+		font-style: italic;
+		font-weight: 400;
+		line-height: 130%; /* 62.4px */
+		text-transform: uppercase;
+		flex-shrink: 0;
+	}
+	// .tobuy__descr
+	&__descr {
+		@media (min-width: toEm($mobile)) {
+			flex-basis: toRem(200);
+		}
+	}
+	// .tobuy__cart
+	&__cart {
+	}
+}
+.cart-tobuy {
+	flex-basis: toRem(433);
+	border-radius: 20px;
+	background: $white;
+	box-shadow: 0px toRem(50) toRem(130) 0px rgba(26, 29, 33, 0.03);
+	@include adaptiveValue(padding-top, 76, 34, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-left, 36, 26, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-right, 36, 26, $maxWidthContainer, $mobile);
+	@include adaptiveValue(padding-bottom, 59, 40, $maxWidthContainer, $mobile);
+
+	position: relative;
+	z-index: 2;
+	&::before {
+		content: "";
+		display: block;
+		width: 90%;
+		@include adaptiveValue(height, 22, 8, $maxWidthContainer, $mobile);
+		background-color: $gold;
+		position: absolute;
+		top: 0;
+		translate: -50% -100%;
+		left: 50%;
+		border-top-right-radius: toRem(20);
+		border-top-left-radius: toRem(20);
+	}
+	// .cart-tobuy__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	// .cart-tobuy__title
+	&__title {
+		@include adaptiveValue(font-size, 24, 20, $maxWidthContainer, $mobile);
+		line-height: 140%;
+		@include adaptiveValue(margin-bottom, 32, 20, $maxWidthContainer, $mobile);
+	}
+	&__links {
+		@include adaptiveValue(margin-bottom, 25, 15, $maxWidthContainer, $mobile);
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+		width: 100%;
+		@media (max-width: toEm($tablet)) {
+			& > * {
+				width: 100%;
+			}
+		}
+	}
+	// .cart-tobuy__link
+	&__link {
+		&:first-child {
+			text-align: left;
+			@include adaptiveValue(padding, 36, 22, $maxWidthContainer, $mobile);
+			@media (max-width: toEm($tablet)) {
+				text-align: center;
+			}
+		}
+		&:last-child {
+			text-align: left;
+			@include adaptiveValue(padding-top, 38, 24, $maxWidthContainer, $mobile);
+			@include adaptiveValue(padding-bottom, 38, 24, $maxWidthContainer, $mobile);
+			@include adaptiveValue(padding-left, 30, 10, $maxWidthContainer, $mobile);
+			@include adaptiveValue(padding-right, 30, 10, $maxWidthContainer, $mobile);
+			text-align: center;
+			@include adaptiveValue(font-size, 14, 10, $maxWidthContainer, $mobile);
+		}
+	}
+	// .cart-tobuy__text
+	&__text {
+		color: rgba(33, 34, 37, 0.5);
+		line-height: 130%;
+		@include adaptiveValue(font-size, 18, 12, $maxWidthContainer, $mobile);
+	}
+}

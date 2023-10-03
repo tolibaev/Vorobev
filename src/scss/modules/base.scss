@@ -1,0 +1,44 @@
+html {
+   scroll-behavior: smooth;
+}
+body{
+   &._lock {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+   -web-kit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   @supports (overflow: clip) {
+      overflow: clip;
+   }
+   &__page {
+      flex: 1 1 auto;
+   }
+}
+
+._ibg img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+._visiualy-hidden {
+   position: absolute;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   height: toRem(1);
+   width: toRem(1);
+   margin: toRem(-1);
+   clip-path: inset(50%);
+   white-space: nowrap;
+   user-select: none;
+}

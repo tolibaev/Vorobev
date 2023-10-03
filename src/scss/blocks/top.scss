@@ -1,0 +1,189 @@
+.top {
+	color: $white;
+	// .top__container
+	&__container {
+	}
+	// .top__title
+	&__title {
+		text-align: center;
+		max-width: toRem(560);
+		margin: 0 auto;
+		@include adaptiveValue(margin-bottom, 76, 20, $maxWidthContainer, $mobile);
+	}
+	// .top__row
+	&__row {
+		@media (min-width: toEm($mobile)) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			@include adaptiveValue(row-gap, 25, 10, $maxWidthContainer, $mobile);
+			@include adaptiveValue(column-gap, 30, 10, $maxWidthContainer, $mobile);
+		}
+		display: flex;
+		@include adaptiveValue(gap, 25, 10, $maxWidthContainer, $tablet);
+		@include adaptiveValue(margin-bottom, 60, 20, $maxWidthContainer, $mobile);
+		overflow-x: auto;
+	}
+	// .top__column
+	&__column {
+		@include adaptiveValue(flex-basis, 370, 250, $maxWidthContainer, $tablet);
+		@media (min-width: toEm($mobile)) {
+			@include adaptiveValue(min-height, 254, 180, $maxWidthContainer, $mobile);
+		}
+		min-height: toRem(254);
+		@media (max-width: toEm($mobile)) {
+			flex-shrink: 0;
+		}
+		@media (any-hover: hover) {
+			overflow: hidden;
+			&:hover {
+				.item-top__img {
+					scale: 1.1;
+					filter: contrast(110%) brightness(1.2) saturate(1.2);
+				}
+			}
+		}
+	}
+	// .top__item
+	&__item {
+		height: 100%;
+		position: relative;
+	}
+	&__bottom {
+		text-align: center;
+		max-width: toRem(820);
+		margin: 0 auto;
+	}
+	// .top__info
+	&__info {
+		display: block;
+		@include adaptiveValue(font-size, 18, 14, $maxWidthContainer, $mobile);
+		@include adaptiveValue(margin-bottom, 30, 10, $maxWidthContainer, $mobile);
+	}
+	// .top__descr
+	&__descr {
+		@include adaptiveValue(font-size, 18, 12, $maxWidthContainer, $mobile);
+	}
+}
+.item-top {
+	display: block;
+	@media (max-width: toEm($mobile)) {
+		background: oklch(97.85% 0.005 258.32);
+		border-bottom-left-radius: toRem(10);
+		border-bottom-right-radius: toRem(10);
+		border-top-left-radius: toRem(6);
+		border-top-right-radius: toRem(6);
+		overflow: hidden;
+	}
+
+	// .item-top__img
+	&__img {
+		@media (min-width: toEm($mobile)) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%);
+			border-radius: 0;
+		}
+		transition:
+			scale 0.3s,
+			filter 0.3s;
+		position: relative;
+		border-bottom-left-radius: toRem(6);
+		border-bottom-right-radius: toRem(6);
+		height: toRem(146);
+		overflow: hidden;
+		@media (max-width: toEm($mobile)) {
+			margin-bottom: toRem(-12);
+		}
+	}
+	// .item-top__body
+	&__body {
+		@include adaptiveValue(gap, 20, 10, $maxWidthContainer, $mobile);
+		@media (min-width: toEm($mobile)) {
+			height: 100%;
+			padding-top: toRem(54);
+			position: relative;
+			z-index: 2;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: inherit;
+			background: none;
+			border-radius: 0;
+		}
+		display: block;
+
+		color: $color;
+		padding: toRem(0) toRem(10) toRem(12) toRem(22);
+	}
+	// .item-top__label
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		@include adaptiveValue(font-size, 16, 12, $maxWidthContainer, $mobile);
+		line-height: 120%;
+		padding: toRem(5) toRem(5) toRem(5) toRem(12);
+		border-radius: toRem(6);
+		position: relative;
+		z-index: 4;
+		span {
+			padding-left: toRem(6);
+			@media (min-width: toEm($mobile)) {
+				color: inherit;
+			}
+			color: $white;
+		}
+		&--orange {
+			background-color: oklch(72.3% 0.19 50.54);
+		}
+		&--green {
+			background-color: oklch(65.7% 0.094 171.42);
+		}
+		&--tomato {
+			background-color: oklch(62.77% 0.179 34.15);
+		}
+		&--pink {
+			background-color: oklch(58.79% 0.22 299.68);
+		}
+		&--blue {
+			background-color: oklch(67.2% 0.14 252.47);
+		}
+	}
+	// .item-top__name
+	&__name {
+		@include adaptiveValue(font-size, 32, 26, $maxWidthContainer, $mobile);
+		font-weight: 500;
+		line-height: calc(50 / 32);
+		position: relative;
+		width: fit-content;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: toRem(3);
+			background-color: $gold;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		@media (max-width: toEm($mobile)) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .item-top__place
+	&__place {
+		display: flex;
+		align-items: center;
+		gap: toRem(7);
+		@include adaptiveValue(font-size, 14, 10, $maxWidthContainer, $mobile);
+		font-weight: 500;
+		@media (max-width: toEm($mobile)) {
+			path {
+				fill: oklch(76.36% 0 0);
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+[class*="__container"] {
+   max-width: #{calc(($maxWidthContainer + 2 * $containerPadding) / 16) + rem};
+   padding-left: toRem($containerPadding);
+   padding-right: toRem($containerPadding);
+   margin: 0 auto;
+}
+[class*="__container-right"] {
+   margin: 0;
+   max-width: 100%;
+   padding-left: toRem(0);
+   padding-right: calc((100% - #{$maxWidthContainer}px) / 2 + #{$containerPadding}px);
+   margin-right: toRem($containerPadding);
+}
+[class*="__container-left"] {
+   margin: 0;
+   max-width: 100%;
+   padding-left: toRem(0);
+   padding-left: calc((100% - #{$maxWidthContainer}px) / 2 + #{$containerPadding}px);
+   margin-left: toRem($containerPadding);
+}
